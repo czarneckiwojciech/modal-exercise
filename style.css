@@ -1,0 +1,150 @@
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(231, 229, 229);
+}
+
+.btn {
+  display: flex;
+  align-content: flex-end;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: #ed6755;
+  margin-top: 5px;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.modal-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(170, 164, 164);
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  height: 200px;
+  width: 500px;
+  border-radius: 10px;
+  animation-name: animatetop;
+  animation-duration: 0.6s;
+  animation-name: animatetop;
+  animation-duration: 0.6s
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+.modal__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 25px;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.modal__text {
+  padding: 25px 25px;
+  font-weight: lighter;
+  color: rgb(146, 146, 146);
+  line-height: 20px;
+}
+
+/* Back animation */
+
+.modal__animation-container {
+  position: relative;
+  width: 50px;
+  cursor: pointer;
+}
+
+.modal__back {
+  width: inherit;
+  text-align: center;
+}
+
+label {
+  font-size: .8em;
+  line-height: .4em;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  transition: all .1s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal__back:before,
+.modal__back:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: inherit;
+  background: #FFC107;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.modal__back:before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.modal__back:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.modal__animation-container:hover label {
+  opacity: 1;
+}
+
+.modal__animation-container:hover .modal__back:before,
+.modal__animation-container:hover .modal__back:after {
+  transform: rotate(0);
+}
+
+.modal__animation-container:hover .modal__back:before {
+  top: -10px;
+}
+
+.modal__animation-container:hover .modal__back:after {
+  bottom: -10px;
+}
+
+@media (max-width:396px) {
+  .modal {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
