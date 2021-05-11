@@ -1,16 +1,14 @@
 const modalContainer = document.querySelector('.modal-container');
-const btn = document.querySelector('.btn');
-const closeBtn = document.querySelector('label');
+const btnTruth = document.querySelector('.btn-truth');
+const closeBtn = document.querySelector('.modal__animation-container');
 const btnContainer = document.querySelector('.btn-container');
-const secondClick = false;
-const duration = 1000;
 
-btn.addEventListener('click', () => {
-    modalContainer.style.display = "flex";
-    btnContainer.style.display = 'none';
+btnTruth.addEventListener('click', () => {
+    modalContainer.classList.toggle("flex-on");
+    btnContainer.classList.toggle("flex-off");
 })
 
 closeBtn.addEventListener('click', () => {
-    modalContainer.style.display = "none";
-    btnContainer.style.display = 'flex';
+    modalContainer.classList.toggle("flex-on");
+    btnContainer.classList.toggle("flex-off");
 })
